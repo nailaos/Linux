@@ -1,12 +1,38 @@
 #include <iostream>
 using namespace std;
-
 int main() {
-	int m = 5, n = 7;
-	cout << "m: " << m << "\n"
-	     << "n: " << n << endl;
-	((m = (5 > 3 && 2)) || (n = (8 < 4 - !0)));
-	cout << "m: " << m << "\n"
-	     << "n: " << n << endl;
+	int score;
+	cout << "请输入成绩[0-100]" << endl;
+	cin >> score;
+	switch (score) {
+		case 80:
+			cout << "balabula" << endl;
+			break;
+		default:
+			switch (score / 10) {
+				case 10:
+				case 9:
+					cout << "优" << endl;
+					break;
+				case 7:
+					cout << "中" << endl;
+					break;
+				case 6:
+					cout << "及格" << endl;
+					break;
+				case 5:
+				case 4:
+				case 3:
+				case 2:
+				case 1:
+				case 0:
+					cout << "不及格" << endl;
+					break;
+				default:
+					cout << "输入错误" << endl;
+					break;
+			}
+	}
+
 	return 0;
 }
