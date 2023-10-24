@@ -1,0 +1,50 @@
+#include <iostream>
+using namespace std;
+int main() {
+	double a, b;
+	int shiyi, yi, qw, bw, sw, w, q, bai, s, ge, shiwei, baiwei;
+
+	double qo = 0.001;
+	cout << "请输入[0..100亿]之间的数字" << endl;
+	cin>>a;
+	b = a;
+	shiyi = b / 1000000000;
+	double c = b - shiyi * 1e9;
+	yi = (int)(c / 1e8);
+	double d = c - yi * 1e8;
+	qw = (int)(d / 1e7);
+	double e = d - qw * 1e7;
+	bw = (int)(e / 1e6);
+	double f = e - bw * 1e6;
+	sw = (int)(f / 1e5);
+	double g = f - sw * 1e5;
+	w = (int)(g / 1e4);
+	double h = g - w * 1e4;
+	q = (int)(h / 1e3);
+	double i = h - q * 1e3;
+	bai = (int)(i / 1e2);
+	double j = i - bai * 1e2;
+	s = (int)(j / 10);
+	double k = j - s * 10;
+	ge = (int)k;
+	double l = k - ge + 0.001;
+	double m = l * 10;
+	shiwei = (int)m % 10;
+	double n = m * 10;
+	baiwei = (int)n % 10;
+	cout << "十亿位 ：" << shiyi << endl;
+	cout << "亿位   ：" << yi << endl;
+	cout << "千万位 ：" << qw << endl;
+	cout << "百万位 ：" << bw << endl;
+	cout << "十万位 ：" << sw << endl;
+	cout << "万位   ：" << w << endl;
+	cout << "千位   ：" << q << endl;
+	cout << "百位   ：" << bai << endl;
+	cout << "十位   ：" << s << endl;
+	cout << "圆     ：" << ge << endl;
+	cout << "角     ：" << shiwei << endl;
+	cout << "分     ：" << baiwei << endl;
+	cout << (int)b << endl;
+	cout << (b / 1e9) << endl;
+	cout << qo << endl;
+}
